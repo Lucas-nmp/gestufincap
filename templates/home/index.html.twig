@@ -28,19 +28,16 @@
 									<a href="#section2">{{"Services"|trans}}</a>
 								</li>
 								<li>
-									<a href="#section3">{{"Who we are?"|trans}}</a>
-								</li>
-								<li>
-									<a href="#section4">{{"Opinions"|trans}}</a>
+									<a href="#section3">{{"Opinions"|trans}}</a>
 								</li>
                                 <li>
-									<a href="#section5">{{"News"|trans}}</a>
+									<a href="#section4">{{"News"|trans}}</a>
 								</li>
                                 <li>
-									<a href="#section6">{{"Contact"|trans}}</a>
+									<a href="#section5">{{"Contact"|trans}}</a>
 								</li>
                                 <li>
-									<a href="#section7">{{"login"|trans}}</a>
+									<a href="#section6">{{"login"|trans}}</a>
 								</li>
                                 {% if is_granted('ROLE_USER') %}
                                     <li>
@@ -87,6 +84,12 @@
 					<div class="section-heading">
 						<h2 class="overlay-text">{{'Discover the most transparent and closest administration'|trans}}</h2>
 					</div>
+					<span>
+						{{'En GesTuFinca somos especialistas en gestión integral de comunidades de propietarios, ofreciendo un servicio cercano, eficiente y completamente adaptado a las necesidades de cada comunidad.
+						Nuestro compromiso es claro: administrar con transparencia, rigor y tecnología. Creemos que cada comunidad merece una gestión moderna, con información accesible en tiempo real y herramientas que faciliten la toma de decisiones.
+						Contamos con un equipo multidisciplinar que combina experiencia profesional con servicios digitales avanzados: reuniones virtuales, votación online, panel financiero interactivo, gestor de incidencias desde el móvil y acceso permanente a documentación histórica.
+						Más que una gestoría, somos el aliado de tu comunidad para que todo funcione… y tú no tengas que preocuparte por nada.'|trans}}
+					</span>
 				</div>
 			</section>
 
@@ -143,25 +146,9 @@
 				</div>
 			</section>
 
-			<!-- Who we are section -->
-			<section class="section who-we-are" data-section="section3">
-				<div class="container">
-					<div class="section-who">
-						<h2>{{'Who we are?'|trans}}</h2>
-						
-						<span>{{'En GesTuFinca somos especialistas en gestión integral de comunidades de propietarios, ofreciendo un servicio cercano, eficiente y completamente adaptado a las necesidades de cada comunidad.
-							Nuestro compromiso es claro: administrar con transparencia, rigor y tecnología. Creemos que cada comunidad merece una gestión moderna, con información accesible en tiempo real y herramientas que faciliten la toma de decisiones.
-							Contamos con un equipo multidisciplinar que combina experiencia profesional con servicios digitales avanzados: reuniones virtuales, votación online, panel financiero interactivo, gestor de incidencias desde el móvil y acceso permanente a documentación histórica.
-							Más que una gestoría, somos el aliado de tu comunidad para que todo funcione… y tú no tengas que preocuparte por nada.'|trans}}</span>
-					</div>
-					
-
-				</div>
-			</section>
-
-
+		
 			<!-- Opinions Section -->
-			<section class="section opinions" data-section="section4">
+			<section class="section opinions" data-section="section3">
 				<div class="container">
 					<div class="section-heading">
 						<h2>{{'Opinions'|trans}}</h2>
@@ -171,7 +158,7 @@
 					<div class="opinions-grid">
 						<div class="opinions-item">
 							<h4>Ana Martínez (01-06-25)</h4>
-							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget.”</p>
+							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget.”</p>
 						</div>
 						<div class="opinions-item">
 							<h4>José Luis Ortega (28-05-25)</h4>
@@ -179,7 +166,7 @@
 						</div>
 						<div class="opinions-item">
 							<h4>Lucía Fernández (20-05-25)</h4>
-							<p>“Praesent nec nisl at urna facilisis tempus. Vestibulum ante ipsum primis.”</p>
+							<p>“Praesent nec nisl at urna facilisis tempus. Vestibulum ante ipsum primis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget. ”</p>
 						</div>
 						<div class="opinions-item">
 							<h4>David Romero (15-05-25)</h4>
@@ -187,7 +174,7 @@
 						</div>
 						<div class="opinions-item">
 							<h4>David Romero (15-05-25)</h4>
-							<p>“Sed euismod velit nec sapien malesuada, sit amet vulputate ligula facilisis.”</p>
+							<p>“Sed euismod velit nec sapien malesuada, sit amet vulputate ligula facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget.”</p>
 						</div>
 						<div class="opinions-item">
 							<h4>David Romero (15-05-25)</h4>
@@ -201,8 +188,58 @@
 			
 
 			<!-- News Galery -->
-			<section class="section news" data-section="section5">
+			<section class="section news-section" data-section="section4">
+				<div class="container">
+					<div class="section-heading">
+						<h2>{{ 'News'|trans }}</h2>
+						<span>{{ 'Latest news about communities'|trans }}</span>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="news-item">
+							<h4>Las comunidades de vecinos solo pueden vetar los pisos turísticos si lo fijan expresamente en los estatutos</h4>
+							<p>El Tribunal Supremo advierte en una nueva sentencia que las normas aprobadas por los propietarios deben establecer de forma “clara y precisa” las limitaciones de las viviendas y no basta una “mera descripción”</p>
+							<p>Nuria Morcillo|Madrid|06 mar 2025 - 16:12 CET</p>
+							<a href="https://www.elmundo.es/economia/2025/06/06/6842fc6821efa0ef608b459d.html" target="_blank" class="news-button">{{'Expand news'|trans}}</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="news-item">
+							<h4>El crédito hipotecario repunta con los precios de la vivienda por las nubes: ¿hay riesgo de una nueva burbuja?</h4>
+							<p>La financiación vuelve a fluir y ya hay concesiones por más del 80%. El Banco de España descarta de momento una nueva crisis del ladrillo, pero admite su preocupación</p>
+							<p>Sandra López Letón|Madrid|07 jun 2025 - 05:30 CEST</p>
+							<a href="https://www.elmundo.es/economia/2025/06/06/6842fc6821efa0ef608b459d.html" target="_blank" class="news-button">{{'Expand news'|trans}}</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="news-item">
+							<h4>La vivienda registra su mayor subida en 18 años: un 12,2% en el primer trimestre del 2025</h4>
+							<p>Los precios encadenan 40 trimestres al alza en un contexto marcado por un déficit de oferta ante una demanda creciente y las bajadas de los tipos de interés que han abaratado las hipotecas.</p>
+							<p>Sandra López Letón|Madrid|07 jun 2025 - 05:30 CEST</p>
+							
+							<a href="https://www.elmundo.es/economia/2025/06/06/6842fc6821efa0ef608b459d.html" target="_blank" class="news-button">{{'Expand news'|trans}}</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="news-item">
+							<h4>La vivienda registra su mayor subida en 18 años: un 12,2% en el primer trimestre del 2025</h4>
+							<p>Los precios encadenan 40 trimestres al alza en un contexto marcado por un déficit de oferta ante una demanda creciente y las bajadas de los tipos de interés que han abaratado las hipotecas.</p>
+							<p>Sandra López Letón|Madrid|07 jun 2025 - 05:30 CEST</p>
+							<a href="https://www.elmundo.es/economia/2025/06/06/6842fc6821efa0ef608b459d.html" target="_blank" class="news-button">{{'Expand news'|trans}}</a>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="news-item">
+							<h4>La vivienda registra su mayor subida en 18 años: un 12,2% en el primer trimestre del 2025</h4>
+							<p>Los precios encadenan 40 trimestres al alza en un contexto marcado por un déficit de oferta ante una demanda creciente y las bajadas de los tipos de interés que han abaratado las hipotecas.</p>
+							<p>Sandra López Letón|Madrid|07 jun 2025 - 05:30 CEST</p>
+							<a href="https://www.elmundo.es/economia/2025/06/06/6842fc6821efa0ef608b459d.html" target="_blank" class="news-button">{{'Expand news'|trans}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
+
 
 
 
