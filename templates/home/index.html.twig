@@ -34,13 +34,13 @@
 									<a href="#section4">{{"Opinions"|trans}}</a>
 								</li>
                                 <li>
-									<a href="#section4">{{"News"|trans}}</a>
+									<a href="#section5">{{"News"|trans}}</a>
 								</li>
                                 <li>
-									<a href="#section4">{{"Contact"|trans}}</a>
+									<a href="#section6">{{"Contact"|trans}}</a>
 								</li>
                                 <li>
-									<a href="#section4">{{"login"|trans}}</a>
+									<a href="#section7">{{"login"|trans}}</a>
 								</li>
                                 {% if is_granted('ROLE_USER') %}
                                     <li>
@@ -78,105 +78,135 @@
 				</div>
 			</div>
 
+			<!-- home section -->
 			<section class="section about-me" data-section="section1">
 				<div class="container">
 					<div class="top-header">
-						<img src="/images/edificios nubes.jpg" alt="edificios nubes"/>
+						<img src="/images/edificios nubes2.jpg" alt="edificios nubes"/>
 					</div>
 					<div class="section-heading">
-
-						<h2>Introducing Blugoon</h2>
-						<div class="line-dec"></div>
-						<span>Blugoon is free HTML template for everyone. This is a Bootstrap v4.3.1 layout which you can fully customize for your websites. Please tell your friends about Tooplate. Thank you.</span>
-					</div>
-					<div class="right-image-post">
-						<div class="row">
-
-							<div class="col-md-8">
-								<div class="left-text">
-									<h4>Modern Web Design</h4>
-									<p>You are allowed to use this template for commercial or personal websites. You are NOT allowed to redistribute this on template collection website. You can feature this template on your blog post.</p>
-									<p>All photos in this template are from
-										<a rel="nofollow" href="https://www.pexels.com">Pexels</a>
-										website. Blugoon HTML Template is provided by Tooplate. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
-									<div class="white-button">
-										<a href="#">Read More</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="right-image">
-									<img src="/images/edificio agua.jpg" alt="Mountain Reflection"/>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="left-image-post">
-						<div class="row">
-
-							<div class="col-md-4">
-								<div class="left-image">
-									<img src="/images/edificios nubes.jpg" alt="Nature Girl"/>
-								</div>
-							</div>
-
-							<div class="col-md-8">
-								<div class="right-text">
-									<h4>Best Template for you!</h4>
-									<p>Quisque feugiat nisl at lacus condimentum, eu suscipit odio fringilla. Mauris eu est vitae erat condimentum pellentesque. Fusce vehicula nunc at augue sagittis tristique.</p>
-									<p>Ut imperdiet massa at enim tempus volutpat. Nullam gravida augue quis facilisis commodo. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-									<div class="white-button">
-										<a href="#">Read More</a>
-									</div>
-								</div>
-							</div>
-
-						</div>
+						<h2 class="overlay-text">{{'Discover the most transparent and closest administration'|trans}}</h2>
 					</div>
 				</div>
 			</section>
 
+			<!-- Services section -->
 			<section class="section my-services" data-section="section2">
 				<div class="container">
 					<div class="section-heading">
 						<h2>{{'Services'}}</h2>
-						<div class="line-dec"></div>
-						<span>Praesent posuere fringilla elit, non maximus tellus posuere nec. Nunc eu sapien nec est elementum sodales.</span>
+						
+						<span>{{'Smart services for your community.'|trans}}</span>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="service-item">
-								<i class="fa fa-area-chart"></i>
-								<h4>Top Performance</h4>
-								<p>Donec sit amet tempor quam. Maecenas nec aliquam leo, sed tincidunt urna.</p>
+							<i class="fa fa-folder-open"></i> <!-- Documentación -->
+							<h4>Acceso a Documentación Histórica</h4>
+							<p>Consulta online actas de reuniones, contratos y comunicados anteriores desde cualquier dispositivo.</p>
 							</div>
 						</div>
+
 						<div class="col-md-6">
 							<div class="service-item">
-								<i class="fa fa-check-square-o"></i>
-								<h4>Trusted Service</h4>
-								<p>Etiam at porta nulla, et euismod enim. Nullam semper ipsum et dui scelerisque.</p>
+							<i class="fa fa-video-camera"></i> <!-- Reuniones online -->
+							<h4>Reuniones Online y Votación Digital</h4>
+							<p>Convoca reuniones virtuales y permite a los propietarios votar online sin desplazamientos.</p>
 							</div>
 						</div>
+
 						<div class="col-md-6">
 							<div class="service-item">
-								<i class="fa fa-question-circle"></i>
-								<h4>Need Help?</h4>
-								<p>Phasellus orci leo, elementum ac risus id, euismod porta lorem. Quisque feugiat.</p>
+							<i class="fa fa-line-chart"></i> <!-- Finanzas en tiempo real -->
+							<h4>Panel Financiero en Tiempo Real</h4>
+							<p>Visualiza ingresos, gastos, fondos disponibles y comparativas con meses anteriores al instante.</p>
 							</div>
 						</div>
+
 						<div class="col-md-6">
 							<div class="service-item">
-								<i class="fa fa-support"></i>
-								<h4>Quick Support</h4>
-								<p>Mauris eu est vitae erat condimentum pellentesque. Fusce vehicula nunc.</p>
+							<i class="fa fa-cogs"></i> <!-- Mantenimiento inteligente -->
+							<h4>Control Inteligente de Mantenimiento</h4>
+							<p>Automatizamos y optimizamos mantenimientos con alertas, prioridades y proveedores evaluados.</p>
 							</div>
 						</div>
-					</div>
+
+						<div class="col-md-6">
+							<div class="service-item">
+							<i class="fa fa-wrench"></i> <!-- Incidencias vecinales -->
+							<h4>Gestor de Incidencias Vecinales</h4>
+							<p>Reporta averías o incidencias directamente desde tu móvil y sigue el estado en tiempo real.</p>
+							</div>
+						</div>
+						</div>
+
 				</div>
 			</section>
 
+			<!-- Who we are section -->
+			<section class="section who-we-are" data-section="section3">
+				<div class="container">
+					<div class="section-who">
+						<h2>{{'Who we are?'|trans}}</h2>
+						
+						<span>{{'En GesTuFinca somos especialistas en gestión integral de comunidades de propietarios, ofreciendo un servicio cercano, eficiente y completamente adaptado a las necesidades de cada comunidad.
+							Nuestro compromiso es claro: administrar con transparencia, rigor y tecnología. Creemos que cada comunidad merece una gestión moderna, con información accesible en tiempo real y herramientas que faciliten la toma de decisiones.
+							Contamos con un equipo multidisciplinar que combina experiencia profesional con servicios digitales avanzados: reuniones virtuales, votación online, panel financiero interactivo, gestor de incidencias desde el móvil y acceso permanente a documentación histórica.
+							Más que una gestoría, somos el aliado de tu comunidad para que todo funcione… y tú no tengas que preocuparte por nada.'|trans}}</span>
+					</div>
+					
+
+				</div>
+			</section>
+
+
+			<!-- Opinions Section -->
+			<section class="section opinions" data-section="section4">
+				<div class="container">
+					<div class="section-heading">
+						<h2>{{'Opinions'|trans}}</h2>
+						
+						<span>{{'Lo que opinan nuestros clientes'|trans}}</span>
+					</div>
+					<div class="opinions-grid">
+						<div class="opinions-item">
+							<h4>Ana Martínez (01-06-25)</h4>
+							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget.”</p>
+						</div>
+						<div class="opinions-item">
+							<h4>José Luis Ortega (28-05-25)</h4>
+							<p>“Curabitur nec justo at quam tincidunt ullamcorper. Duis ac nisi vel leo.”</p>
+						</div>
+						<div class="opinions-item">
+							<h4>Lucía Fernández (20-05-25)</h4>
+							<p>“Praesent nec nisl at urna facilisis tempus. Vestibulum ante ipsum primis.”</p>
+						</div>
+						<div class="opinions-item">
+							<h4>David Romero (15-05-25)</h4>
+							<p>“Sed euismod velit nec sapien malesuada, sit amet vulputate ligula facilisis.”</p>
+						</div>
+						<div class="opinions-item">
+							<h4>David Romero (15-05-25)</h4>
+							<p>“Sed euismod velit nec sapien malesuada, sit amet vulputate ligula facilisis.”</p>
+						</div>
+						<div class="opinions-item">
+							<h4>David Romero (15-05-25)</h4>
+							<p>“Sed euismod velit nec sapien malesuada, sit amet vulputate ligula facilisis.”</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			
+
+			<!-- News Galery -->
+			<section class="section news" data-section="section5">
+			</section>
+
+
+
+			<!-- Section Galery -->
 			<section class="section my-work" data-section="section3">
 				<div class="container">
 					<div class="section-heading">
