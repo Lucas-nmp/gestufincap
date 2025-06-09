@@ -1,0 +1,49 @@
+<section class="section news-section" data-section="section4">
+    <div class="container">
+        <div class="section-heading">
+            <h2>{{ 'Latest News'|trans }}</h2>
+        </div>
+        {% for news in latestNews %}
+            <div class="row">
+                <div class="col-md-6">
+                <div class="news-item">
+                    <h4>{{ news.title }}</h4>
+                    <p>{{ news.body|slice(0, 500) ~ '...' }}</p>
+                    <p>{{ news.author }} &nbsp;|&nbsp; Lucena &nbsp;|&nbsp; {{ news.datenews|date('d-m-Y') }}</p>
+
+                    {% if news.link %}
+                    <a href="{{ news.link }}" target="_blank" class="news-button">{{ 'Expand news'|trans }}</a>
+                    {% else %}
+                    <button class="news-button" onclick="openModal({{ news.id }})">{{ 'Expand news'|trans }}</button>
+                    {% endif %}
+                </div>
+                </div>
+            </div>
+
+            {# Modal oculto para cada noticia sin link #}
+            {% if not news.link %}
+                <div class="modal" id="modal-{{ news.id }}">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal({{ news.id }})">&times;</span>
+                    <h4>{{ news.title }}</h4>
+                    <p>{{ news.body }}</p>
+                    <p>{{ news.author }} - {{ news.datenews|date('d-m-Y') }}</p>
+                </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        
+    </div>
+</section>
+
+
+<script>
+  function openModal(id) {
+    document.getElementById('modal-' + id).style.display = 'block';
+  }
+
+  function closeModal(id) {
+    document.getElementById('modal-' + id).style.display = 'none';
+  }
+</script>
