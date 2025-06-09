@@ -37,7 +37,7 @@
 									<a href="#section5">{{"Contact"|trans}}</a>
 								</li>
                                 <li>
-									<a href="#section6">{{"login"|trans}}</a>
+									<a href="#section6">{{"Login"|trans}}</a>
 								</li>
                                 {% if is_granted('ROLE_USER') %}
                                     <li>
@@ -187,7 +187,7 @@
 
 			
 
-			<!-- News Galery -->
+			<!-- News section -->
 			<section class="section news-section" data-section="section4">
 				<div class="container">
 					<div class="section-heading">
@@ -242,39 +242,70 @@
 
 
 			<!-- Section Contact us -->
-			<!-- Section Contact us -->
-			<section class="section contact-me" data-section="section5">
+			<section class="section news-section" data-section="section5">
 				<div class="container">
 					<div class="section-heading">
-					<h2>Información de contacto</h2>
+						<h2>Información de contacto</h2>
 					
 					</div>
 
 					<div class="contact-info">
-					<div class="contact-row">
-						<div class="contact-item">
-							<i class="fa fa-phone"></i>
-							<p><a href="tel:+34123456789">+34 699761695</a></p>
+						<div class="contact-row">
+							<div class="contact-item">
+								<i class="fa fa-phone"></i>
+								<p><a href="tel:+34123456789">+34 699761695</a></p>
+							</div>
+
+							<div class="contact-item">
+								<i class="fa fa-envelope"></i>
+								<p><a href="mailto:info@gestufinca.com">administracion@gestufinca.es</a></p>
+							</div>
+
+							<div class="contact-item">
+								<i class="fa fa-home"></i>
+								<p><a href="mailto:info@gestufinca.com">Cl. Cabrillana 1 1°-4, Lucena, Spain</a></p>
+							</div>
 						</div>
 
-						<div class="contact-item">
-							<i class="fa fa-envelope"></i>
-							<p><a href="mailto:info@gestufinca.com">administracion@gestufinca.es</a></p>
+						<div class="contact-item facebook">
+							<i class="fa fa-facebook"></i>
+							<p><a href="https://www.facebook.com/people/Gestufinca/61563980921780/" target="_blank">Síguenos en Facebook</a></p>
 						</div>
-
-						<div class="contact-item">
-							<i class="fa fa-phone"></i>
-							<p>Cl. Cabrillana 1 1°-4, Lucena, Spain</p>
-						</div>
-					</div>
-
-					<div class="contact-item facebook">
-						<i class="fa fa-facebook"></i>
-						<p><a href="https://www.facebook.com/people/Gestufinca/61563980921780/" target="_blank">Síguenos en Facebook</a></p>
-					</div>
 					</div>
 				</div>
 			</section>
+
+
+			<!-- Section login -->
+			<section class="section news-section" data-section="section6">
+				<div class="container">
+					<div class="section-heading">
+						<h2>Login</h2>
+					
+					</div>
+					<div class="login-wrapper">
+						<form class="login-form" method="post" action="/login">
+							<div class="form-group">
+								<label for="username">Nombre de usuario</label>
+								<input type="text" id="username" name="_username" required>
+							</div>
+
+							<div class="form-group">
+								<label for="password">Contraseña</label>
+								<input type="password" id="password" name="_password" required>
+							</div>
+
+							<button type="submit" class="login-button">Iniciar sesión</button>
+						</form>
+					</div>
+
+					
+					
+				</div>
+			</section>
+
+
+
 
 
 

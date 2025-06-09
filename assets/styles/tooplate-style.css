@@ -4,7 +4,7 @@ Tooplate 2116 Blugoon
 
 https://www.tooplate.com/view/2116-blugoon
 
-fondo  #bebebe
+fondo  #bebebe oscuro  #dad9d9 mas claro
 logotipo #7c1c1c
 
 
@@ -20,7 +20,7 @@ body {
 /*  Color de Fondo */
 #page-wraper {
     
-    background: #bebebe no-repeat center center fixed;
+    background: #dad9d9 no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -421,6 +421,62 @@ html {
 }
 
 .news-button:hover {
+  background-color: #5e1414;
+}
+
+
+/*Section login*/
+.login-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.login-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #7c1c1c;
+  font-size: 0.95rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #7c1c1c;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #7c1c1c;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
   background-color: #5e1414;
 }
 
