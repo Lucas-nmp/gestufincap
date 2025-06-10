@@ -899,6 +899,59 @@ section.contact-me {
   cursor: pointer;
 }
 
+/* list of elements*/
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #7c1c1c;
+  color: white;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-button {
+  background-color: #7c1c1c;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-right: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.table-button:hover {
+  background-color: #5e1414;
+  color: #fff;
+}
+
+.news-actions {
+  margin-bottom: 20px;
+}
+
+
 
 
 
