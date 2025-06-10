@@ -951,6 +951,42 @@ section.contact-me {
   margin-bottom: 20px;
 }
 
+.delete-button {
+  background-color: #7c1c1c;
+  margin-left: 5px;
+}
+
+.delete-button:hover {
+  background-color: #5e1414;
+}
+
+
+
+/* forms */
+.form-wrapper {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.form-button {
+  background-color: #7c1c1c;
+  color: white;
+  padding: 12px 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #5e1414;
+}
+
 
 
 

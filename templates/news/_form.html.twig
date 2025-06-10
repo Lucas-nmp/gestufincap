@@ -1,4 +1,11 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<div class="form-wrapper">
+  {{ form_start(form) }}
+    {{ form_row(form.author) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.date_news) }}
+    {{ form_row(form.body) }}
+    {{ form_row(form.link) }}
+
+    <button class="form-button">{{ button_label|default('Save') }}</button>
+  {{ form_end(form) }}
+</div>

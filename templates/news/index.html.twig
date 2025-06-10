@@ -41,6 +41,12 @@
               <a href="{{ path('app_news_edit', {'id': news.id}) }}" class="table-button" title="{{ 'Edit'|trans }}">
                 <i class="fa fa-pencil"></i>
               </a>
+                <form method="post" action="{{ path('app_news_delete', {'id': news.id}) }}" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta noticia?');" style="display:inline;">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ news.id) }}">
+                    <button class="table-button delete-button" title="Eliminar">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </form>
             </td>
           </tr>
         {% else %}
