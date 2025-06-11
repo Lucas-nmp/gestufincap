@@ -6,9 +6,10 @@
   <h1>{{ 'News'|trans }}</h1>
 
   <div class="news-actions">
-    <a href="{{ path('app_news_new') }}" class="table-button" title="{{ 'Add news'|trans }}">
+    <button type="button" class="table-button" title="{{ 'Add news'|trans }}" data-bs-toggle="modal" data-bs-target="#addNewsModal">
       <i class="fa fa-plus"></i>
-    </a>
+    </button>
+
     <a href="{{ path('app_home') }}" class="table-button" title="{{ 'Home'|trans }}">
       <i class="fa fa-home"></i>
     </a>
@@ -69,4 +70,20 @@
       </tbody>
     </table>
   </div>
+
+  <!-- Modal para añadir noticia -->
+<div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addNewsModalLabel">{{ 'Add News'|trans }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ 'Close'|trans }}"></button>
+      </div>
+      <div class="modal-body">
+        {{ include('news/_form.html.twig', { form: form }) }}
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}

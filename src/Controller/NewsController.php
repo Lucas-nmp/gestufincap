@@ -14,13 +14,26 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/news')]
 final class NewsController extends AbstractController
 {
-    #[Route(name: 'app_news_index', methods: ['GET'])]
-    public function index(NewsRepository $newsRepository): Response
+    #[Route(name: 'app_news_index', methods: ['GET', 'POST'])]
+    public function index(Request $request, EntityManagerInterface $entityManager, NewsRepository $newsRepository): Response
     {
+        $news = new News();
+        $form = $this->createForm(NewsForm::class, $news);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($news);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_news_index', [], Response::HTTP_SEE_OTHER);
+        }
+
         return $this->render('news/index.html.twig', [
             'news' => $newsRepository->findAll(),
+            'form' => $form->createView(),
         ]);
     }
+
 
     #[Route('/new', name: 'app_news_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response

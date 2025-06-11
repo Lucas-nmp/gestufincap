@@ -1,11 +1,26 @@
 <div class="form-wrapper">
   {{ form_start(form) }}
-    {{ form_row(form.author) }}
-    {{ form_row(form.title) }}
-    {{ form_row(form.date_news) }}
-    {{ form_row(form.body) }}
-    {{ form_row(form.link) }}
 
-    <button class="form-button">{{ button_label|default('Save') }}</button>
+    <div class="mb-3">
+      {{ form_row(form.author) }}
+    </div>
+    <div class="mb-3">
+      {{ form_row(form.title) }}
+    </div>
+    <div class="mb-3">
+      {{ form_row(form.date_news) }}
+    </div>
+    <div class="mb-3">
+      {{ form_row(form.body) }}
+    </div>
+    <div class="mb-3">
+      {{ form_row(form.link) }}
+    </div>
+
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary">{{ button_label|default('Guardar') }}</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ 'Cancelar' }}</button>
+    </div>
+
   {{ form_end(form) }}
 </div>

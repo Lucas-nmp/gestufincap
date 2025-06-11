@@ -27,14 +27,11 @@ services:
     depends_on:
       - database
     portforward: true
-  node:
-    type: node
-    version: 18
 
 tooling:
-  npm:
-    service: node
-  yarn:
-    service: node
   node:
-    service: node
+    service: appserver
+  npm:
+    service: appserver
+  yarn:
+    service: appserver
