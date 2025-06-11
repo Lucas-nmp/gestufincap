@@ -5,18 +5,18 @@
         </div>
         {% for news in latestNews %}
             <div class="row">
-                <div class="col-md-6">
-                <div class="news-item">
-                    <h4>{{ news.title }}</h4>
-                    <p>{{ news.body|slice(0, 500) ~ '...' }}</p>
-                    <p>{{ news.author }} &nbsp;|&nbsp; Lucena &nbsp;|&nbsp; {{ news.datenews|date('d-m-Y') }}</p>
+                <div class="col-md-12">
+                    <div class="news-item">
+                        <h4>{{ news.title }}</h4>
+                        <p>{{ news.body|slice(0, 500) ~ '...' }}</p>
+                        <p>{{ news.author }} &nbsp;|&nbsp; Lucena &nbsp;|&nbsp; {{ news.datenews|date('d-m-Y') }}</p>
 
-                    {% if news.link %}
-                    <a href="{{ news.link }}" target="_blank" class="news-button">{{ 'Expand news'|trans }}</a>
-                    {% else %}
-                    <button class="news-button" onclick="openModal({{ news.id }})">{{ 'Expand news'|trans }}</button>
-                    {% endif %}
-                </div>
+                        {% if news.link %}
+                        <a href="{{ news.link }}" target="_blank" class="news-button">{{ 'Expand news'|trans }}</a>
+                        {% else %}
+                        <button class="news-button" onclick="openModal({{ news.id }})">{{ 'Expand news'|trans }}</button>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
 
