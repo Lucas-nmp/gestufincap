@@ -418,9 +418,15 @@
         };
 
         $(".main-menu").on("click", "a", function (e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-        });
+			const href = $(this).attr("href");
+			
+			if (href.startsWith("#")) {
+				e.preventDefault();
+				showSection(href, true);
+			}
+			// si NO empieza por #, dejamos que el navegador siga el enlace
+		});
+
 
         $(window).scroll(function () {
         checkSection();
