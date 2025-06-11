@@ -688,7 +688,8 @@ button:hover {
     border-radius: 3%;
 }
 
-.service-item h4 {
+.service-item h5 {
+    font-size: 1.5rem;
     transition: all 0.5s;
     color: #7c1c1c;
 }
@@ -699,10 +700,10 @@ button:hover {
 
 .service-item:hover {
     background-color: rgb(165, 163, 163);
-    
+
 }
 
-.service-item:hover h4 {
+.service-item:hover h5 {
     color: #1e1e1e;
 }
 
