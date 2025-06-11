@@ -899,10 +899,12 @@ section.contact-me {
   cursor: pointer;
 }
 
-/* list of elements*/
+/* list of elements table*/
 .table-wrapper {
   overflow-x: auto;
   margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -920,26 +922,50 @@ section.contact-me {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  vertical-align: middle;
 }
 
 .styled-table th {
   background-color: #7c1c1c;
   color: white;
+  white-space: nowrap;
 }
 
 .styled-table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
+.styled-table td.actions-cell {
+  white-space: nowrap;
+  width: 150px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.action-buttons form {
+  margin: 0;
+}
+
 .table-button {
   background-color: #7c1c1c;
   color: white;
-  padding: 6px 10px;
+  width: 34px;
+  height: 34px;
   border-radius: 6px;
   text-decoration: none;
-  margin-right: 5px;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   transition: background-color 0.3s ease;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .table-button:hover {
@@ -953,12 +979,12 @@ section.contact-me {
 
 .delete-button {
   background-color: #7c1c1c;
-  margin-left: 5px;
 }
 
 .delete-button:hover {
   background-color: #5e1414;
 }
+
 
 
 

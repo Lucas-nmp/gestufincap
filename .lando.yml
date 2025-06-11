@@ -7,6 +7,7 @@ config:
     memory_limit: 4096M
     max_execution_time: 600
     post_max_size: 2048M
+
 services:
   appserver:
     portforward: true
@@ -26,3 +27,14 @@ services:
     depends_on:
       - database
     portforward: true
+  node:
+    type: node
+    version: 18
+
+tooling:
+  npm:
+    service: node
+  yarn:
+    service: node
+  node:
+    service: node
