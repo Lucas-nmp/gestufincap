@@ -18,8 +18,12 @@
     </div>
 
     <div class="modal-footer">
-      <button type="submit" class="btn btn-primary">{{ button_label|default('Guardar') }}</button>
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ 'Cancelar' }}</button>
+      <button type="submit" class="btn btn-primary me-2" title="Guardar">
+        <i class="fa fa-save"></i>
+      </button>
+      <a href="{{ path('app_news_index') }}" class="btn btn-secondary" title="Volver a la lista">
+        <i class="fa fa-arrow-left"></i>
+      </a>
     </div>
 
   {{ form_end(form) }}
