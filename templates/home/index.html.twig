@@ -27,40 +27,22 @@
 								<li>
 									<a href="#section2">{{"Services"|trans}}</a>
 								</li>
-								<li>
-									<a href="#section3">{{"Opinions"|trans}}</a>
-								</li>
+								
                                 <li>
 									<a href="#section4">{{"News"|trans}}</a>
 								</li>
                                 <li>
 									<a href="#section5">{{"Contact"|trans}}</a>
 								</li>
-                                <li>
-									<a href="#section6">{{"Login"|trans}}</a>
-								</li>
-								 <li>
-									<a href="{{ path('app_news_index') }}">{{ 'Noticias'|trans }}</a>
-								</li>
+                             
+								 
 
-
-                                {% if is_granted('ROLE_USER') %}
-                                    <li>
-                                        <a href="{{ path('app_home') }}">{{ 'information about your community'|trans }}</a>
-                                    </li>
-                                {% endif %}
                                 {% if is_granted('ROLE_ADMIN') %}
                                     <li>
-                                        <a href="{{ path('app_home') }}">{{ 'Comunidades'|trans }}</a>
-                                        <a href="{{ path('app_home') }}">{{ 'Información'|trans }}</a>
-                                        <a href="{{ path('app_home') }}">{{ 'Opiniones'|trans }}</a>
-                                        <a href="{{ path('app_home') }}">{{ 'Vecinos'|trans }}</a>
-                                        <a href="{{ path('app_home') }}">{{ 'Noticias'|trans }}</a>
-									
-								    </li>
+                                        <a href="{{ path('app_news_index') }}">{{ 'Manage News'|trans }}</a>
+                                    </li>
                                 {% endif %}
-                                
-
+               
 							</ul>
 						</nav>
 						<div class="social-network">
@@ -74,8 +56,10 @@
 							</ul>
 						</div>
 						<div class="copyright-text">
-							<p>&copy; {{ "now"|date("Y") }} GesTuFinca. Todos los derechos reservados.</p>
-  
+							<p>&copy; {{ "now"|date("Y") }} 
+								<a href="{{ path('app_login') }}">GesTuFinca</a>. 
+								Todos los derechos reservados.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -112,7 +96,7 @@
 							<div class="service-item">
 							<i class="fa fa-folder-open"></i> <!-- Documentación -->
 							<h5>Acceso a Documentación Histórica</h5>
-							<p>Consulta online actas de reuniones, contratos y comunicados anteriores desde cualquier dispositivo.</p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also.</p>
 							</div>
 						</div>
 
@@ -120,7 +104,7 @@
 							<div class="service-item">
 							<i class="fa fa-video-camera"></i> <!-- Reuniones online -->
 							<h5>Reuniones Online y Votación Digital</h5>
-							<p>Convoca reuniones virtuales y permite a los propietarios votar online sin desplazamientos.</p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also.</p>
 							</div>
 						</div>
 
@@ -128,7 +112,7 @@
 							<div class="service-item">
 							<i class="fa fa-line-chart"></i> <!-- Finanzas en tiempo real -->
 							<h5>Panel Financiero en Tiempo Real</h5>
-							<p>Visualiza ingresos, gastos, fondos disponibles y comparativas con meses anteriores al instante.</p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also.</p>
 							</div>
 						</div>
 
@@ -136,7 +120,7 @@
 							<div class="service-item">
 							<i class="fa fa-cogs"></i> <!-- Mantenimiento inteligente -->
 							<h5>Control Inteligente de Mantenimiento</h5>
-							<p>Automatizamos y optimizamos mantenimientos con alertas, prioridades y proveedores evaluados.</p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also.</p>
 							</div>
 						</div>
 
@@ -144,7 +128,7 @@
 							<div class="service-item">
 							<i class="fa fa-wrench"></i> <!-- Incidencias vecinales -->
 							<h5>Gestor de Incidencias Vecinales</h5>
-							<p>Reporta averías o incidencias directamente desde tu móvil y sigue el estado en tiempo real.</p>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also.</p>
 							</div>
 						</div>
 						</div>
@@ -153,7 +137,7 @@
 			</section>
 
 		
-			<!-- Opinions Section -->
+			<!-- Opinions Section
 			<section class="section opinions" data-section="section3">
 				<div class="container">
 					<div class="section-heading">
@@ -190,7 +174,7 @@
 
 				</div>
 			</section>
-
+			 -->
 			
 
 			<!-- News section -->
@@ -231,7 +215,7 @@
 			</section>
 
 
-			<!-- Section login -->
+			<!-- Section login 
 			<section class="section news-section" data-section="section6">
 				<div class="container">
 					<div class="section-heading">
@@ -258,6 +242,7 @@
 					
 				</div>
 			</section>
+			-->
 
 
 
@@ -266,8 +251,7 @@
 
 
 
-
-			<!-- Section Galery -->
+			<!-- Section Galery 
 			<section class="section my-work" data-section="section5">
 				<div class="container">
 					<div class="section-heading">
@@ -373,7 +357,7 @@
 					</div>
 				</div>
 			</section>
-
+			-->
 			
 		</div>
 		<!-- Scripts -->
@@ -424,7 +408,7 @@
 				e.preventDefault();
 				showSection(href, true);
 			}
-			// si NO empieza por #, dejamos que el navegador siga el enlace
+			
 		});
 
 
