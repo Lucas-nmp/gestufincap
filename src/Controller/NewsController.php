@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use DateTime;
+use DateTime;
 
 #[Route('/news')]
 final class NewsController extends AbstractController
@@ -42,6 +43,7 @@ final class NewsController extends AbstractController
     {
         $news = new News();
         $news->setDateNews(new DateTime());
+        $news->setDateNews(new DateTime()); 
         $form = $this->createForm(NewsForm::class, $news);
         $form->handleRequest($request);
 

@@ -9,12 +9,18 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 
+
+
 class NewsForm extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             ->add('author')
+            ->add('date_news', DateType::class, [
+                'widget' => 'single_text',
+                'label' => 'News Date',
+            ])
             ->add('date_news', DateType::class, [
                 'widget' => 'single_text',
                 'label' => 'Fecha de la noticia',

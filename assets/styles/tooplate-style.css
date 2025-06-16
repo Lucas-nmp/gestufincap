@@ -1179,10 +1179,7 @@ button[type="submit"]:hover {
 }
 
 @media screen and (max-width: 1680px) {
-    .menu {
-        left: 4%;
-    }
-
+    
     .section {
         color: #fff;
         width: 65%;
