@@ -1,15 +1,18 @@
 <div class="form-wrapper">
   {{ form_start(form) }}
 
-    <div class="mb-3">
-      {{ form_row(form.author) }}
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        {{ form_row(form.author) }}
+      </div>
+      <div class="col-md-4 mb-3">
+        {{ form_row(form.title) }}
+      </div>
+      <div class="col-md-4 mb-3">
+        {{ form_row(form.date_news) }}
+      </div>
     </div>
-    <div class="mb-3">
-      {{ form_row(form.title) }}
-    </div>
-    <div class="mb-3">
-      {{ form_row(form.date_news) }}
-    </div>
+
     <div class="mb-3">
       {{ form_row(form.body) }}
     </div>
@@ -18,8 +21,15 @@
     </div>
 
     <div class="modal-footer">
-      <button type="submit" class="btn btn-primary">{{ button_label|default('Guardar') }}</button>
+      <button type="submit" class="btn btn-primary w-50" title="Save">
+        <i class="fa fa-save"></i> Guardar
+      </button>
+      <button type="button" class="btn btn-secondary w-50" data-bs-dismiss="modal" title="Cancel">
+        <i class="fa fa-times"></i> Cancelar
+      </button>
     </div>
+
+
 
   {{ form_end(form) }}
 </div>

@@ -19,11 +19,7 @@ class NewsForm extends AbstractType
             ->add('author')
             ->add('date_news', DateType::class, [
                 'widget' => 'single_text',
-                'label' => 'News Date',
-            ])
-            ->add('date_news', DateType::class, [
-                'widget' => 'single_text',
-                'label' => 'Fecha de la noticia',
+                'label' => 'Date',
             ])
             ->add('body')
             ->add('link')
