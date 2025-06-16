@@ -6,9 +6,13 @@
   <h1>{{ 'News'|trans }}</h1>
 
   <div class="news-actions">
-    <button type="button" class="table-button" title="{{ 'Add news'|trans }}" data-bs-toggle="modal" data-bs-target="#addNewsModal">
+    <button type="button" class="table-button"
+            title="{{ 'Add news'|trans }}"
+            data-url="{{ path('app_news_new') }}"
+            onclick="loadFormInModal(this)">
       <i class="fa fa-plus"></i>
     </button>
+
 
     <a href="{{ path('app_home') }}" class="table-button" title="{{ 'Home'|trans }}">
       <i class="fa fa-home"></i>
@@ -33,9 +37,13 @@
           <tr>
             <td class="actions-cell">
               <div class="action-buttons">
-                <a href="{{ path('app_news_edit', {'id': news.id}) }}" class="table-button" title="{{ 'Edit'|trans }}">
+                <a href="#" class="table-button"
+                  data-url="{{ path('app_news_edit', {'id': news.id}) }}"
+                  onclick="loadFormInModal(this)"
+                  title="{{ 'Edit'|trans }}">
                   <i class="fa fa-pencil"></i>
                 </a>
+
                 <form method="post" action="{{ path('app_news_delete', {'id': news.id}) }}" onsubmit="return confirm('¿Estás seguro de que quieres eliminar esta noticia?');">
                   <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ news.id) }}">
                   <button class="table-button delete-button" title="Delete">
@@ -82,5 +90,24 @@
     </div>
   </div>
 </div>
+
+<script>
+  function loadFormInModal(button) {
+    const url = button.getAttribute('data-url');
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        const modalBody = document.querySelector('#addNewsModal .modal-body');
+        const modalTitle = document.querySelector('#addNewsModalLabel');
+        modalBody.innerHTML = html;
+        modalTitle.textContent = button.title || 'Editar noticia';
+        new bootstrap.Modal(document.getElementById('addNewsModal')).show();
+      })
+      .catch(error => {
+        console.error('Error al cargar el formulario:', error);
+      });
+  }
+</script>
+
 
 {% endblock %}
