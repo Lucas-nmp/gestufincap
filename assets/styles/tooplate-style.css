@@ -1010,7 +1010,7 @@ section.contact-me {
 
 .styled-table td.actions-cell {
   white-space: nowrap;
-  width: 150px;
+  
 }
 
 .action-buttons {
@@ -1029,6 +1029,7 @@ section.contact-me {
   background-color: #7c1c1c;
   color: white;
   width: 34px;
+  
   height: 34px;
   border-radius: 6px;
   text-decoration: none;
@@ -1048,6 +1049,8 @@ section.contact-me {
 
 .news-actions {
   margin-bottom: 20px;
+  padding-left: 50px;
+  gap: 0;
 }
 
 .delete-button {
@@ -1064,17 +1067,15 @@ section.contact-me {
 /* forms */
 form {
     max-width: 400px;
-    margin: 80px auto;
-    padding: 2rem;
+    margin: 50px auto;
     background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; 
 }
 
 h1 {
     text-align: center;
     margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    margin-top: 50px;
     color: #333;
 }
 
