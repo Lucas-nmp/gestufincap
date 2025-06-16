@@ -1187,7 +1187,7 @@ button[type="submit"]:hover {
 @media screen and (max-width: 1680px) {
     
     .section {
-        color: #fff;
+        color: #222222;
         width: 65%;
         right: 5%;
         left: 30%;
